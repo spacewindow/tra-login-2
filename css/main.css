@@ -67,7 +67,8 @@ footer {
 .button-options {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  flex-wrap: wrap;
 }
 
 .question {
@@ -79,10 +80,10 @@ footer {
 a.button-large {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
-  width: 30%;
-  height: 120px;
+  width: 40%;
+  min-height: 100px;
   border-radius: 1em;
   padding: 1.2em;
   margin: 1em;
@@ -99,7 +100,8 @@ a.button-large:hover {
 
 a.button-large.register {
   background: gold;
-  height: 4em;
+  min-height: 4em;
+  align-items: center;
   margin: 1.4em 0;
   font-weight: 700;
 }
@@ -120,4 +122,10 @@ a.back-button {
 
 a.back-button:hover {
   text-decoration: underline;
+}
+
+.hint:before {
+  content: "ⓘ";
+  font-weight: bold;
+  color: rgb(0, 140, 255);
 }
