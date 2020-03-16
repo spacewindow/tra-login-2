@@ -2239,7 +2239,7 @@ select#tinynav1 {
     display: none;
   }
 }
-@font-face {
+/* @font-face {
   font-family: "scala_sans-regular";
   src: url(/sites/all/themes/custom/tra_theme/fonts/ScalaSans-Regular.otf)
     format("opentype");
@@ -2248,7 +2248,7 @@ select#tinynav1 {
   font-family: "Lucida Sans Unicode";
   src: url(/sites/all/themes/custom/tra_theme/fonts/lucida-sans-unicode.ttf)
     format("truetype");
-}
+} */
 body {
   background: none;
   color: #000;
@@ -2392,8 +2392,8 @@ p.diisr-rteElement-BL,
   text-transform: capitalize;
 }
 .front {
-  background: url(/sites/all/themes/custom/tra_theme/images/homepage-background.jpg)
-    repeat-x scroll 0 -46px transparent;
+  /* background: url(/sites/all/themes/custom/tra_theme/images/homepage-background.jpg) */
+    /* repeat-x scroll 0 -46px transparent; */
 }
 .page-title {
   padding-top: 2px;
@@ -2643,18 +2643,17 @@ table {
 }
 #block-superfish-1 a.active,
 .region-navigation .block__content > .menu > li.active-trail > a {
-  background: url(/sites/all/themes/custom/tra_theme/images/topnav-selected.jpg)
-    no-repeat scroll center top transparent;
+  background: url(/images/topnav-selected.jpg) 
+ repeat-x scroll center top transparent;
 }
 #block-superfish-1 a.active:hover {
-  background: url(/sites/all/themes/custom/tra_theme/images/topnav-selected-highlight.jpg)
-    no-repeat scroll center top #f8c700;
+  ba/at scroll center top #f8c700;
 }
 .region-navigation .block__content > .menu > li > a:hover,
 .region-navigation .block__content > .menu > li.sfHover > a,
 .region-navigation .block__content > .menu > li > a:focus {
-  background: url(/sites/all/themes/custom/tra_theme/images/topnav-hover.gif)
-    repeat-x scroll 0 0 transparent;
+  /* background: url(/sites/all/themes/custom/tra_theme/images/topnav-hover.gif)
+    repeat-x scroll 0 0 transparent; */
   text-decoration: none;
   padding-top: 11px;
   margin-bottom: -3px;
@@ -2866,8 +2865,8 @@ footer {
 }
 #block-menu-block-1 h2.block-title::before {
   content: " ";
-  background: url(/sites/all/themes/custom/tra_theme/images/ArrowCollapse.png)
-    no-repeat 10px 13px transparent;
+  /* background: url(/sites/all/themes/custom/tra_theme/images/ArrowCollapse.png)
+    no-repeat 10px 13px transparent; */
   width: 50px;
   height: 40px;
   position: absolute;
@@ -2878,8 +2877,8 @@ footer {
 }
 #block-menu-block-1 ul .is-collapsed::before {
   content: " ";
-  background: url(/sites/all/themes/custom/tra_theme/images/ArrowExpand.png)
-    no-repeat -2px 8px transparent;
+  /* background: url(/sites/all/themes/custom/tra_theme/images/ArrowExpand.png)
+    no-repeat -2px 8px transparent; */
   width: 10px;
   height: 40px;
   position: absolute;
@@ -2888,8 +2887,8 @@ footer {
 }
 #block-menu-block-1 ul .is-expanded::before {
   content: " ";
-  background: url(/sites/all/themes/custom/tra_theme/images/ArrowCollapse.png)
-    no-repeat 0px 8px transparent;
+  /* background: url(/sites/all/themes/custom/tra_theme/images/ArrowCollapse.png)
+    no-repeat 0px 8px transparent; */
   width: 10px;
   height: 40px;
   position: absolute;
@@ -2931,8 +2930,8 @@ footer {
   text-decoration: underline;
 }
 .front .panel-display {
-  background: url(/sites/all/themes/custom/tra_theme/images/homepage-cream-panel.png)
-    no-repeat scroll 0px 260px;
+  /* background: url(/sites/all/themes/custom/tra_theme/images/homepage-cream-panel.png)
+    no-repeat scroll 0px 260px; */
 }
 .panel-3col-33-stacked .panel-col-last,
 .panel-3col-33-stacked .panel-col,
@@ -3124,8 +3123,8 @@ footer {
   }
   .mobile-expand-menu {
     border: 0;
-    background: url(/sites/all/themes/custom/tra_theme/images/mobileMenu.png)
-      no-repeat center center transparent;
+    /* background: url(/sites/all/themes/custom/tra_theme/images/mobileMenu.png)
+      no-repeat center center transparent; */
     height: 41px;
     width: 35px;
     overflow: hidden;
@@ -3270,8 +3269,8 @@ footer {
     margin-right: 40px;
   }
   #bottom {
-    background: url(/sites/all/themes/custom/tra_theme/images/mobile-footer.jpg)
-      repeat-x scroll center top transparent;
+    /* background: url(/sites/all/themes/custom/tra_theme/images/mobile-footer.jpg)
+      repeat-x scroll center top transparent; */
     height: 100%;
   }
   #footer {

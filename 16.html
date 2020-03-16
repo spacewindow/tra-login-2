@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+  <body style="display:none">
+    <div id="responsive"></div>
+    <div id="app">
+      <header></header>
+      <nav></nav>
+
+      <!-- ### CONTENT -->
+
+      <div id="pathfinder" class="info">
+        <h2>
+          Temporary Skills Shortage (TSS) Skills Assessment
+        </h2>
+
+        <p>
+          As a <span id="tradeSpan"></span> from <span id="countrySpan"></span>,
+          you are elligible to have your trade qualifications assessed for
+          working in Australia, as part of our Temporary Skills Shortage
+          program.
+        </p>
+        <a
+          class="button-large register"
+          href="https://extranet.education.gov.au/trades/Interface/Pages/Security/Logon.aspx"
+        >
+          Register for TSS Skills Assessment
+        </a>
+
+        <a class="back-button" onclick="history.back()">Back</a>
+      </div>
+
+      <!-- ### END CONTENT -->
+
+      <footer></footer>
+    </div>
+  </body>
+  <script src="template.js"></script>
+  <script>
+    const query = new URLSearchParams(window.location.search);
+    const selectedCountry = query.get("country");
+    const selectedTrade = query.get("trade");
+
+    let countrySpan = document.getElementById("countrySpan");
+    countrySpan.innerHTML = selectedCountry;
+
+    let tradeSpan = document.getElementById("tradeSpan");
+    tradeSpan.innerHTML = selectedTrade;
+  </script>
+</html>

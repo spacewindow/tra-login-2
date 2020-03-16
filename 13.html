@@ -11,11 +11,11 @@
 
       <div id="pathfinder">
         <form>
-          <label for="trade">What is your trade qualification?</label>
+          <label for="trade">What is your country of passport?</label>
 
-          <select id="tradeSelect"></select>
+          <select id="countrySelect"></select>
 
-          <a class="next-button" id="nextButton" href="10.html" style="display:none" >Next</button>
+          <a class="next-button" id="nextButton" style="display:none" >Next</button>
           </form>
           <a class="back-button" onclick="history.back()">Back</a>
         </div>
@@ -29,42 +29,45 @@
   <script src="template.js"></script>
   <script>
 
-    let tradeSelect = document.getElementById('tradeSelect');
-    tradeSelect.length = 0;
+    let countrySelect = document.getElementById('countrySelect');
+    countrySelect.length = 0;
 
     let defaultOption = document.createElement('option');
-    defaultOption.text = 'Select your trade...';
+    defaultOption.text = 'Select your country...';
 
     let noneOption = document.createElement('option');
     noneOption.text = "None of the above";
     noneOption.value = "none";
 
-    tradeSelect.add(defaultOption);
-    tradeSelect.selectedIndex = 0;
+    countrySelect.add(defaultOption);
+    countrySelect.selectedIndex = 0;
 
-    fetch("/data/TRS.json")
+    fetch("/data/OSAPByCountry.json")
     .then(response => {
       return response.json();
     })
     .then(data => {
-      data.map(item => {
+      const countries = Object.keys(data);
+      console.log(countries);
+      countries.map(item => {
         let option = document.createElement('option');
         option.text = item;
         option.value = item;
-        tradeSelect.add(option);
+        countrySelect.add(option);
         return null;
       });
-      tradeSelect.add(noneOption);
+      countrySelect.add(noneOption);
     });
 
     const nextButton = document.getElementById("nextButton")
-    tradeSelect.addEventListener("change", e => {
+    countrySelect.addEventListener("change", e => {
       if (e.target.value === "none"){
-        nextButton.setAttribute("href", "11.html");
+        nextButton.setAttribute("href", "14.html");
         nextButton.setAttribute("style", "display:flex");
         return;
       }
-      nextButton.setAttribute("href", "10.html");
+      const countryString = e.target.value.replace(/\s/g,"+");
+      nextButton.setAttribute("href", "15.html?country=" + countryString);
       nextButton.setAttribute("style", "display:flex");
     })
 

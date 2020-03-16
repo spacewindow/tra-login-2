@@ -11,11 +11,12 @@
 
       <div id="pathfinder">
         <form>
-          <label for="trade">What is your trade qualification?</label>
+          <label for="trade">What is your trade?</label>
+          <p class="hint">TRA assesses a limited number of trades from <span id="countrySpan"></span></p>
 
           <select id="tradeSelect"></select>
 
-          <a class="next-button" id="nextButton" href="10.html" style="display:none" >Next</button>
+          <a class="next-button" id="nextButton" style="display:none" >Next</button>
           </form>
           <a class="back-button" onclick="history.back()">Back</a>
         </div>
@@ -28,6 +29,12 @@
 
   <script src="template.js"></script>
   <script>
+
+    const query = new URLSearchParams(window.location.search);
+    const selectedCountry = query.get("country");
+
+    let countrySpan = document.getElementById('countrySpan');
+    countrySpan.innerHTML = selectedCountry;
 
     let tradeSelect = document.getElementById('tradeSelect');
     tradeSelect.length = 0;
@@ -42,12 +49,13 @@
     tradeSelect.add(defaultOption);
     tradeSelect.selectedIndex = 0;
 
-    fetch("/data/TRS.json")
+    fetch("/data/OSAPByCountry.json")
     .then(response => {
       return response.json();
     })
     .then(data => {
-      data.map(item => {
+      const trades = data[selectedCountry];
+      trades.map(item => {
         let option = document.createElement('option');
         option.text = item;
         option.value = item;
@@ -57,14 +65,17 @@
       tradeSelect.add(noneOption);
     });
 
-    const nextButton = document.getElementById("nextButton")
+    const nextButton = document.getElementById("nextButton");
     tradeSelect.addEventListener("change", e => {
       if (e.target.value === "none"){
-        nextButton.setAttribute("href", "11.html");
+        nextButton.setAttribute("href", "17.html");
         nextButton.setAttribute("style", "display:flex");
         return;
       }
-      nextButton.setAttribute("href", "10.html");
+      const tradeString = e.target.value.replace(/\s/g,"+");
+      const countryString = selectedCountry.replace(/\s/g,"+");
+      console.log("tradeString", tradeString);
+      nextButton.setAttribute("href", "16.html?country=" + countryString + "&trade=" + tradeString);
       nextButton.setAttribute("style", "display:flex");
     })
 

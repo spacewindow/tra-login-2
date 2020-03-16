@@ -4,11 +4,6 @@
     "​Electrician (General) [341111]",
     "​Plumber (General) [334111]"
   ],
-  "​Ireland": [
-    "​Airconditioning and Refrigeration Mechanic [342111]",
-    "​Electrician (Special Class) [341112]",
-    "​Plumber (General) [334111]"
-  ],
   "South Africa": [
     "​Airconditioning and Refrigeration Mechanic [342111]",
     "​Automotive Electrician [321111]",
@@ -175,6 +170,7 @@
     "​Welder (First Class) [322313]"
   ],
   "Ireland": [
+    "​Airconditioning and Refrigeration Mechanic [342111]",
     "​Automotive Electrician [321111]",
     "​Baker [351111]",
     "​Bricklayer [331111]",
@@ -185,6 +181,7 @@
     "​Cook [351411]",
     "​Diesel Motor Mechanic [321212]",
     "​Electrician (General) [341111]",
+    "​Electrician (Special Class) [341112]",
     "Electronic Equipment Tradesworker [342313]",
     "​Fitter (General) [323211]",
     "​Fitter and Turner [323212]",
@@ -197,6 +194,7 @@
     "​Motor Mechanic (General) [321211]",
     "​Panelbeater [324111]",
     "​Pastrycook [351112]",
+    "​Plumber (General) [334111]",
     "​Pressure Welder [322312]",
     "​Sheetmetal Trades Worker [322211]",
     "​Toolmaker [323412]",
@@ -312,7 +310,7 @@
     "Vehicle Painter [324311]",
     "​Welder (First Class) [322313]"
   ],
-  "United  Kingdom": [
+  "United Kingdom": [
     "​Automotive Electrician [321111]",
     "​Baker [351111]",
     "Cabinetmaker [394111]",
@@ -427,6 +425,7 @@
     "​Welder (First Class) [322313]"
   ],
   "Republic of Korea": [
+    "CHEF DUDE [123456]",
     "​Bricklayer [331111]",
     "Cabinetmaker [394111]",
     "​Carpenter [331212]",
