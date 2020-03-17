@@ -71,8 +71,7 @@ footer {
   flex-wrap: wrap;
 }
 
-.question,
-label {
+.question {
   font-weight: 700;
   font-size: 2em;
   text-align: center;

@@ -10,7 +10,9 @@ const loadPartial = (selector, target) => {
     })
     .then(partial => {
       const replaceMe = document.querySelector(target);
-      replaceMe.parentNode.replaceChild(partial, replaceMe);
+      if (replaceMe) {
+        replaceMe.parentNode.replaceChild(partial, replaceMe);
+      }
     })
     .then(() => {
       // remove display:none on body after insertion of partials to avoid FOUC
@@ -25,3 +27,4 @@ loadPartial("header", "header");
 loadPartial("#nav", "nav");
 loadPartial("footer", "footer");
 loadPartial("#responsive", "#responsive");
+loadPartial("#header-portal", "#header-portal");

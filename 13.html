@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head></head>
-  <body style="display:none">
-    <div id="responsive"></div>
-    <div id="app">
-      <header></header>
-      <nav></nav>
 
-      <!-- ### CONTENT -->
+<head></head>
 
-      <div id="pathfinder">
-        <form>
-          <label for="trade">What is your country of passport?</label>
+<body style="display:none">
+  <div id="responsive"></div>
+  <div id="app">
+    <header></header>
+    <nav></nav>
 
-          <select id="countrySelect"></select>
+    <!-- ### CONTENT -->
 
-          <a class="next-button" id="nextButton" style="display:none" >Next</button>
-          </form>
-          <a class="back-button" onclick="history.back()">Back</a>
-        </div>
+    <div id="pathfinder">
+      <form>
+        <label class="question" for="trade">What is your country of passport?</label>
 
-      <!-- ### END CONTENT -->
+        <select id="countrySelect"></select>
 
-      <footer></footer>
+        <a class="next-button" id="nextButton" style="display:none">Next</button>
+      </form>
+      <a class="back-button" onclick="history.back()">Back</a>
     </div>
-  </body>
 
-  <script src="template.js"></script>
-  <script>
+    <!-- ### END CONTENT -->
 
-    let countrySelect = document.getElementById('countrySelect');
-    countrySelect.length = 0;
+    <footer></footer>
+  </div>
+</body>
 
-    let defaultOption = document.createElement('option');
-    defaultOption.text = 'Select your country...';
+<script src="partials.js"></script>
+<script>
 
-    let noneOption = document.createElement('option');
-    noneOption.text = "None of the above";
-    noneOption.value = "none";
+  let countrySelect = document.getElementById('countrySelect');
+  countrySelect.length = 0;
 
-    countrySelect.add(defaultOption);
-    countrySelect.selectedIndex = 0;
+  let defaultOption = document.createElement('option');
+  defaultOption.text = 'Select your country...';
 
-    fetch("/data/TSSByCountry.json")
+  let noneOption = document.createElement('option');
+  noneOption.text = "None of the above";
+  noneOption.value = "none";
+
+  countrySelect.add(defaultOption);
+  countrySelect.selectedIndex = 0;
+
+  fetch("/data/TSSByCountry.json")
     .then(response => {
       return response.json();
     })
@@ -59,18 +61,19 @@
       countrySelect.add(noneOption);
     });
 
-    const nextButton = document.getElementById("nextButton")
-    countrySelect.addEventListener("change", e => {
-      if (e.target.value === "none"){
-        nextButton.setAttribute("href", "14.html");
-        nextButton.setAttribute("style", "display:flex");
-        return;
-      }
-      const countryString = e.target.value.replace(/\s/g,"+");
-      nextButton.setAttribute("href", "15.html?country=" + countryString);
+  const nextButton = document.getElementById("nextButton")
+  countrySelect.addEventListener("change", e => {
+    if (e.target.value === "none") {
+      nextButton.setAttribute("href", "14.html");
       nextButton.setAttribute("style", "display:flex");
-    })
+      return;
+    }
+    const countryString = e.target.value.replace(/\s/g, "+");
+    nextButton.setAttribute("href", "15.html?country=" + countryString);
+    nextButton.setAttribute("style", "display:flex");
+  })
 
 
-  </script>
+</script>
+
 </html>

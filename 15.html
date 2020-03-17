@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head></head>
-  <body style="display:none">
-    <div id="responsive"></div>
-    <div id="app">
-      <header></header>
-      <nav></nav>
 
-      <!-- ### CONTENT -->
+<head></head>
 
-      <div id="pathfinder">
-        <form>
-          <label for="trade">What is your trade?</label>
-          <p class="hint">TRA assesses a limited number of trades from <span id="countrySpan"></span></p>
+<body style="display:none">
+  <div id="responsive"></div>
+  <div id="app">
+    <header></header>
+    <nav></nav>
 
-          <select id="tradeSelect"></select>
+    <!-- ### CONTENT -->
 
-          <a class="next-button" id="nextButton" style="display:none" >Next</button>
-          </form>
-          <a class="back-button" onclick="history.back()">Back</a>
-        </div>
+    <div id="pathfinder">
+      <form>
+        <label class="question" for="trade">What is your trade?</label>
+        <p class="hint">TRA assesses a limited number of trades from <span id="countrySpan"></span></p>
 
-      <!-- ### END CONTENT -->
+        <select id="tradeSelect"></select>
 
-      <footer></footer>
+        <a class="next-button" id="nextButton" style="display:none">Next</button>
+      </form>
+      <a class="back-button" onclick="history.back()">Back</a>
     </div>
-  </body>
 
-  <script src="template.js"></script>
-  <script>
+    <!-- ### END CONTENT -->
 
-    const query = new URLSearchParams(window.location.search);
-    const selectedCountry = query.get("country");
+    <footer></footer>
+  </div>
+</body>
 
-    let countrySpan = document.getElementById('countrySpan');
-    countrySpan.innerHTML = selectedCountry;
+<script src="partials.js"></script>
+<script>
 
-    let tradeSelect = document.getElementById('tradeSelect');
-    tradeSelect.length = 0;
+  const query = new URLSearchParams(window.location.search);
+  const selectedCountry = query.get("country");
 
-    let defaultOption = document.createElement('option');
-    defaultOption.text = 'Select your trade...';
+  let countrySpan = document.getElementById('countrySpan');
+  countrySpan.innerHTML = selectedCountry;
 
-    let noneOption = document.createElement('option');
-    noneOption.text = "None of the above";
-    noneOption.value = "none";
+  let tradeSelect = document.getElementById('tradeSelect');
+  tradeSelect.length = 0;
 
-    tradeSelect.add(defaultOption);
-    tradeSelect.selectedIndex = 0;
+  let defaultOption = document.createElement('option');
+  defaultOption.text = 'Select your trade...';
 
-    fetch("/data/TSSByCountry.json")
+  let noneOption = document.createElement('option');
+  noneOption.text = "None of the above";
+  noneOption.value = "none";
+
+  tradeSelect.add(defaultOption);
+  tradeSelect.selectedIndex = 0;
+
+  fetch("/data/TSSByCountry.json")
     .then(response => {
       return response.json();
     })
@@ -65,20 +67,21 @@
       tradeSelect.add(noneOption);
     });
 
-    const nextButton = document.getElementById("nextButton");
-    tradeSelect.addEventListener("change", e => {
-      if (e.target.value === "none"){
-        nextButton.setAttribute("href", "17.html");
-        nextButton.setAttribute("style", "display:flex");
-        return;
-      }
-      const tradeString = e.target.value.replace(/\s/g,"+");
-      const countryString = selectedCountry.replace(/\s/g,"+");
-      console.log("tradeString", tradeString);
-      nextButton.setAttribute("href", "16.html?country=" + countryString + "&trade=" + tradeString);
+  const nextButton = document.getElementById("nextButton");
+  tradeSelect.addEventListener("change", e => {
+    if (e.target.value === "none") {
+      nextButton.setAttribute("href", "17.html");
       nextButton.setAttribute("style", "display:flex");
-    })
+      return;
+    }
+    const tradeString = e.target.value.replace(/\s/g, "+");
+    const countryString = selectedCountry.replace(/\s/g, "+");
+    console.log("tradeString", tradeString);
+    nextButton.setAttribute("href", "16.html?country=" + countryString + "&trade=" + tradeString);
+    nextButton.setAttribute("style", "display:flex");
+  })
 
 
-  </script>
+</script>
+
 </html>
