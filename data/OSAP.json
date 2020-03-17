@@ -1,11 +1,11 @@
 {
-  "​Airconditioning and Refrigeration Mechanic [342111]": [
+  "Airconditioning and Refrigeration Mechanic [342111]": [
     "Australia",
-    "​Ireland",
+    "Ireland",
     "South Africa",
     "United Kingdom"
   ],
-  "​Automotive Electrician [321111]": [
+  "Automotive Electrician [321111]": [
     "China",
     "Fiji",
     "Hong Kong SAR",
@@ -20,8 +20,8 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Baker [351111]": [
-    "​China",
+  "Baker [351111]": [
+    "China",
     "Fiji",
     "Hong Kong SAR",
     "India",
@@ -36,7 +36,7 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Bricklayer [331111]": [
+  "Bricklayer [331111]": [
     "Brazil",
     "China",
     "Fiji",
@@ -57,7 +57,7 @@
     "Zimbabwe"
   ],
   "Cabinetmaker [394111]": [
-    "​Brazil",
+    "Brazil",
     "China",
     "Fiji",
     "Hong Kong SAR",
@@ -75,8 +75,8 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Carpenter [331212]": [
-    "​Brazil",
+  "Carpenter [331212]": [
+    "Brazil",
     "China",
     "Fiji",
     "Hong Kong SAR",
@@ -95,8 +95,8 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Carpenter and Joiner [331211]": [
-    "​Brazil",
+  "Carpenter and Joiner [331211]": [
+    "Brazil",
     "China",
     "Fiji",
     "Hong Kong SAR",
@@ -114,31 +114,8 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Chef [351311]": [
+  "Chef [351311]": [
     "Bangladesh*",
-    "​Brazil",
-    "China",
-    "Fiji",
-    "Hong Kong SAR",
-    "India",
-    "Iran",
-    "Ireland",
-    "Macau SAR",
-    "Nepal",
-    "Pakistan*",
-    "Papua New Guinea",
-    "Philippines",
-    "Republic of Korea",
-    "South Africa",
-    "Sri Lanka",
-    "Thailand",
-    "United Arab Emirates",
-    "United  Kingdom",
-    "Vietnam",
-    "Zimbabwe"
-  ],
-  "​Cook [351411]": [
-    "​Bangladesh*",
     "Brazil",
     "China",
     "Fiji",
@@ -160,8 +137,31 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Diesel Motor Mechanic [321212]": [
-    "​China",
+  "Cook [351411]": [
+    "Bangladesh*",
+    "Brazil",
+    "China",
+    "Fiji",
+    "Hong Kong SAR",
+    "India",
+    "Iran",
+    "Ireland",
+    "Macau SAR",
+    "Nepal",
+    "Pakistan*",
+    "Papua New Guinea",
+    "Philippines",
+    "Republic of Korea",
+    "South Africa",
+    "Sri Lanka",
+    "Thailand",
+    "United Arab Emirates",
+    "United  Kingdom",
+    "Vietnam",
+    "Zimbabwe"
+  ],
+  "Diesel Motor Mechanic [321212]": [
+    "China",
     "Fiji",
     "Hong Kong SAR",
     "India",
@@ -175,9 +175,9 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Electrician (General) [341111]": [
+  "Electrician (General) [341111]": [
     "Australia",
-    "​Canada",
+    "Canada",
     "China",
     "Fiji",
     "India",
@@ -186,13 +186,13 @@
     "South Africa",
     "United Kingdom"
   ],
-  "​Electrician (Special Class) [341112]": [
-    "​Australia",
+  "Electrician (Special Class) [341112]": [
+    "Australia",
     "Canada",
     "China",
     "Fiji",
     "India",
-    "​Ireland",
+    "Ireland",
     "Philippines",
     "South Africa",
     "United Kingdom"
@@ -212,8 +212,8 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Fitter (General) [323211]": [
-    "​Brazil",
+  "Fitter (General) [323211]": [
+    "Brazil",
     "China",
     "Fiji",
     "Hong Kong SAR",
@@ -231,8 +231,8 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Fitter and Turner [323212]": [
-    "​Brazil",
+  "Fitter and Turner [323212]": [
+    "Brazil",
     "China",
     "Fiji",
     "Hong Kong SAR",
@@ -249,8 +249,8 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Fitter – Welder [323213]": [
-    "​Brazil",
+  "Fitter – Welder [323213]": [
+    "Brazil",
     "China",
     "Fiji",
     "Hong Kong SAR",
@@ -267,8 +267,8 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Hairdresser [391111]": [
-    "​Brazil",
+  "Hairdresser [391111]": [
+    "Brazil",
     "China",
     "Fiji",
     "Hong Kong SAR",
@@ -286,8 +286,8 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Joiner [331213]": [
-    "​Brazil",
+  "Joiner [331213]": [
+    "Brazil",
     "China",
     "Fiji",
     "Hong Kong SAR",
@@ -305,7 +305,7 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Metal Fabricator [322311]": [
+  "Metal Fabricator [322311]": [
     "Brazil",
     "China",
     "Fiji",
@@ -343,8 +343,8 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Metal Fitters and Machinists (not elsewhere classified) [323299]": [
-    "​Brazil",
+  "Metal Fitters and Machinists (not elsewhere classified) [323299]": [
+    "Brazil",
     "China",
     "Fiji",
     "Hong Kong SAR",
@@ -361,8 +361,8 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Motor Mechanic (General) [321211]": [
-    "​China",
+  "Motor Mechanic (General) [321211]": [
+    "China",
     "Fiji",
     "Hong Kong SAR",
     "India",
@@ -376,7 +376,7 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Panelbeater [324111]": [
+  "Panelbeater [324111]": [
     "China",
     "Fiji",
     "Hong Kong SAR",
@@ -391,8 +391,8 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Pastrycook [351112]": [
-    "​Brazil",
+  "Pastrycook [351112]": [
+    "Brazil",
     "China",
     "Fiji",
     "Hong Kong SAR",
@@ -411,14 +411,14 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Plumber (General) [334111]": [
+  "Plumber (General) [334111]": [
     "Australia",
-    "​Ireland",
+    "Ireland",
     "South Africa",
     "United Kingdom"
   ],
-  "​Pressure Welder [322312]": [
-    "​Brazil",
+  "Pressure Welder [322312]": [
+    "Brazil",
     "China",
     "Fiji",
     "Hong Kong SAR",
@@ -435,8 +435,8 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Sheetmetal Trades Worker [322211]": [
-    "​Brazil",
+  "Sheetmetal Trades Worker [322211]": [
+    "Brazil",
     "China",
     "Fiji",
     "Hong Kong SAR",
@@ -454,7 +454,7 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Toolmaker [323412]": [
+  "Toolmaker [323412]": [
     "Brazil",
     "China",
     "Fiji",
@@ -487,7 +487,7 @@
     "Vietnam",
     "Zimbabwe"
   ],
-  "​Welder (First Class) [322313]": [
+  "Welder (First Class) [322313]": [
     "Brazil",
     "China",
     "Fiji",

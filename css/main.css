@@ -126,7 +126,7 @@ a.back-button:hover {
 }
 
 .hint:before {
-  content: "ⓘ";
+  content: "ⓘ ";
   font-weight: bold;
   color: rgb(0, 140, 255);
 }

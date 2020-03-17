@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+
+<body style="display:none">
+  <div id="responsive"></div>
+  <div id="app">
+    <header></header>
+    <nav></nav>
+
+    <!-- ### CONTENT -->
+
+    <div id="pathfinder">
+      <p>
+        You are applying for Permanent Residency and wanting your trade assessed to contribute to your visa application.
+      </p>
+      <form>
+        <label for="trade">What is your trade qualification?</label>
+
+        <select id="tradeSelect"></select>
+
+        <a class="next-button" id="nextButton" href="10.html" style="display:none">Next</button>
+      </form>
+      <a class="back-button" onclick="history.back()">Back</a>
+    </div>
+
+    <!-- ### END CONTENT -->
+
+    <footer></footer>
+  </div>
+</body>
+
+<script src="template.js"></script>
+<script>
+
+  let tradeSelect = document.getElementById('tradeSelect');
+  tradeSelect.length = 0;
+
+  let defaultOption = document.createElement('option');
+  defaultOption.text = 'Select your trade...';
+
+  let noneOption = document.createElement('option');
+  noneOption.text = "None of the above";
+  noneOption.value = "none";
+
+  tradeSelect.add(defaultOption);
+  tradeSelect.selectedIndex = 0;
+
+  fetch("/data/TRATrades.json")
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {
+      data.map(item => {
+        let option = document.createElement('option');
+        option.text = item;
+        option.value = item;
+        tradeSelect.add(option);
+        return null;
+      });
+      tradeSelect.add(noneOption);
+    });
+
+  const nextButton = document.getElementById("nextButton")
+  tradeSelect.addEventListener("change", e => {
+    if (e.target.value === "none") {
+      nextButton.setAttribute("href", "27.html");
+      nextButton.setAttribute("style", "display:flex");
+      return;
+    }
+
+    // check if selected TRATrade is part of OSAP subset
+    fetch("/data/OSAPTrades.json")
+      .then(response => {
+        return response.json();
+      })
+      .then(OSAPTrades => {
+        console.log(e.target.value);
+        if (OSAPTrades.includes(e.target.value)) {
+          console.log("OSAP Trade - proceed to country check");
+          const tradeString = e.target.value.replace(/\s/g, "+"); // remove spaces
+          nextButton.setAttribute("href", "19.html?trade=" + tradeString);
+          nextButton.setAttribute("style", "display:flex");
+        } else {
+          nextButton.setAttribute("href", "27.html");
+          nextButton.setAttribute("style", "display:flex");
+        }
+
+      });
+  });
+
+
+</script>
+
+</html>

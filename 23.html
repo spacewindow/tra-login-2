@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+
+<body style="display:none">
+  <div id="responsive"></div>
+  <div id="app">
+    <header></header>
+    <nav></nav>
+
+    <!-- ### CONTENT -->
+
+    <div id="pathfinder">
+      <p class="question">
+        As a <span id="tradeSpan"></span>, you have a couple of options available to you.
+      </p>
+
+      <div class="button-options">
+        <a class="button-large" href="24.html"><span>
+            I wish to get an Australian qualification for my trade
+          </span></a>
+
+        <a class="button-large" href="25.html"><span>
+            I want to migrate with my current skills.
+          </span></a>
+
+        <p class="hint">Applying to have an Australian qualification in your trade is advantageous to you in a number of
+          ways ... </p>
+      </div>
+      <a class="back-button" onclick="history.back()">Back</a>
+    </div>
+
+    <!-- ### END CONTENT -->
+
+    <footer></footer>
+  </div>
+</body>
+<script src="template.js"></script>
+<script>
+  const query = new URLSearchParams(window.location.search);
+  const selectedTrade = query.get("trade");
+
+  let tradeSpan = document.getElementById("tradeSpan");
+  tradeSpan.innerHTML = selectedTrade;
+
+  const buttons = document.querySelectorAll(".button-large");
+  buttons.forEach(button => {
+    let href = button.getAttribute("href");
+    button.setAttribute("href", href + "?trade=" + selectedTrade);
+  });
+</script>
+
+</html>

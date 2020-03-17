@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+
+<body style="display:none">
+  <div id="responsive"></div>
+  <div id="app">
+    <header></header>
+    <nav></nav>
+
+    <!-- ### CONTENT -->
+
+    <div id="pathfinder">
+      <p>
+        You are applying for Permanent Residency using your trade of <span id="tradeSpan"></span>.
+      </p>
+      <form>
+        <label for="trade">What is your country of passport?</label>
+
+        <select id="countrySelect"></select>
+
+        <a class="next-button" id="nextButton" href="23.html" style="display:none">Next</button>
+      </form>
+      <a class="back-button" onclick="history.back()">Back</a>
+    </div>
+
+    <!-- ### END CONTENT -->
+
+    <footer></footer>
+  </div>
+</body>
+
+<script src="template.js"></script>
+<script>
+
+  // add trade into starting sentence
+
+  const query = new URLSearchParams(window.location.search);
+  const selectedTrade = query.get("trade");
+
+  let tradeSpan = document.getElementById("tradeSpan");
+  tradeSpan.innerHTML = selectedTrade;
+
+  let countrySelect = document.getElementById('countrySelect');
+  countrySelect.length = 0;
+
+  let defaultOption = document.createElement('option');
+  defaultOption.text = 'Select your country...';
+
+  let noneOption = document.createElement('option');
+  noneOption.text = "None of the above";
+  noneOption.value = "none";
+
+  countrySelect.add(defaultOption);
+  countrySelect.selectedIndex = 0;
+
+  fetch("/data/OSAP.json")
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {
+      const countries = data[selectedTrade];
+      countries.map(item => {
+        let option = document.createElement('option');
+        option.text = item;
+        option.value = item;
+        countrySelect.add(option);
+        return null;
+      });
+      countrySelect.add(noneOption);
+    });
+
+  const nextButton = document.getElementById("nextButton")
+  countrySelect.addEventListener("change", e => {
+    const countryString = e.target.value.replace(/\s/g, "+");
+    const tradeString = selectedTrade.replace(/\s/g, "+");
+    if (e.target.value === "none") {
+      nextButton.setAttribute("href", "23.html?trade=" + tradeString);
+      nextButton.setAttribute("style", "display:flex");
+      return;
+    }
+
+    nextButton.setAttribute("href", "20.html?country=" + countryString + "&trade" + tradeString);
+    nextButton.setAttribute("style", "display:flex");
+  });
+
+
+</script>
+
+</html>

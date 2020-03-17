@@ -42,7 +42,7 @@
     countrySelect.add(defaultOption);
     countrySelect.selectedIndex = 0;
 
-    fetch("/data/OSAPByCountry.json")
+    fetch("/data/TSSByCountry.json")
     .then(response => {
       return response.json();
     })

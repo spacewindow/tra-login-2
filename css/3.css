@@ -1283,8 +1283,8 @@ form#sweaver-frontend > div {
   position: absolute;
   right: 0px;
   text-indent: -100px;
-  background: url(/profiles/govcms/themes/govcms/govcms_zen/images/search-btn-mobile.png?1416352646)
-    50% 50% no-repeat;
+  /* background: url(/profiles/govcms/themes/govcms/govcms_zen/images/search-btn-mobile.png?1416352646)
+    50% 50% no-repeat; */
   background-color: #1b1b1b;
   width: 32px;
   font-weight: bold;
