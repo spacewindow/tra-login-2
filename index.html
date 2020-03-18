@@ -1,72 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+  <div id="header-portal"></div>
 
-<div id="header-portal"></div>
+  <body style="display:none">
+    <div id="responsive"></div>
+    <div id="app">
+      <!-- ### CONTENT -->
 
-<body style="display:none">
-  <div id="responsive"></div>
-  <div id="app">
+      <div id="pathfinder" class="info">
+        <div class="text-center" style="display:flex; flex-direction:row;">
+          <div class="form-register">
+            <div class="register-content">
+              <h2 class="h3 mb-3 font-weight-normal">Register</h2>
+              <label>Which program do you want to register for?</label>
+              <select id="programSelect">
+                <option label="Select an option..." value="none"></option>
+                <option label="Trade Recognition Service" value="TRS"></option>
+                <option
+                  label="Provisional Skills Assessment"
+                  value="PSA"
+                ></option>
+                <option label="JobReady" value="JRE"></option>
+                <option
+                  label="Overseas Skills Assessment"
+                  value="OSAP"
+                ></option>
+                <option label="Migrant Skills Assessment" value="MSA"></option>
+                <option label="Migration Points Advice" value="MPA"></option>
+              </select>
+            </div>
 
-    <!-- ### CONTENT -->
+            <div class="description"></div>
 
-    <div id="pathfinder" class="info">
-      <div class="text-center" style="display:flex; flex-direction:row;">
-        <div class="form-register">
-          <div class="register-content">
-            <h2 class="h3 mb-3 font-weight-normal">Register</h2>
-            <label>Which program do you want to register for?</label>
-            <select id="programSelect">
-              <option label="Select an option..." value="none"></option>
-              <option label="Trade Recognition Service" value="TRS"></option>
-              <option label="Provisional Skills Assessment" value="PSA"></option>
-              <option label="JobReady" value="JRE"></option>
-              <option label="Overseas Skills Assessment" value="OSAP"></option>
-              <option label="Migrant Skills Assessment" value="MSA"></option>
-              <option label="Migration Points Advice" value="MPA"></option>
-            </select>
+            <div class="questionToggle">
+              <p>
+                Not sure?
+                <a href="./2.html">Find your program</a>
+              </p>
+            </div>
           </div>
-
-          <div class="description"></div>
-
-          <div class="questionToggle">
-            <p>
-              Not sure?
-              <a href="/2.html">Find your program</a>
-            </p>
-          </div>
+          <form class="form-signin">
+            <h2 class="h3 mb-3 font-weight-normal">Login</h2>
+            <label for="inputEmail" class="sr-only">
+              Username
+            </label>
+            <input
+              type="text"
+              id="inputEmail"
+              class="form-control"
+              placeholder="Username"
+              required
+              autofocus
+            />
+            <label for="inputPassword" class="sr-only">
+              Password
+            </label>
+            <input
+              type="password"
+              id="inputPassword"
+              class="form-control"
+              placeholder="Password"
+              required
+            />
+            <div class="checkbox mb-3">
+              <a href="#">Forgotten your username or password?</a>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
+              Sign in
+            </button>
+          </form>
         </div>
-        <form class="form-signin">
-          <h2 class="h3 mb-3 font-weight-normal">Login</h2>
-          <label for="inputEmail" class="sr-only">
-            Username
-          </label>
-          <input type="text" id="inputEmail" class="form-control" placeholder="Username" required autoFocus />
-          <label for="inputPassword" class="sr-only">
-            Password
-          </label>
-          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required />
-          <div class="checkbox mb-3">
-            <a href="#">Forgotten your username or password?</a>
-          </div>
-          <button class="btn btn-lg btn-primary btn-block" type="submit">
-            Sign in
-          </button>
-        </form>
       </div>
+
+      <!-- ### END CONTENT -->
     </div>
+  </body>
+  <script src="partials.js"></script>
 
-    <!-- ### END CONTENT -->
+  <script>
+    let programSelect = document.getElementById("programSelect");
 
-  </div>
-</body>
-<script src="partials.js"></script>
-
-<script>
-  let programSelect = document.getElementById('programSelect');
-
-  programSelect.addEventListener("change", e => {
-    loadPartial("#" + e.target.value, ".description");
-  });
-</script>
-
+    programSelect.addEventListener("change", e => {
+      loadPartial("#" + e.target.value, ".description");
+    });
+  </script>
 </html>
