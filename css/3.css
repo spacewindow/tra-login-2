@@ -2602,7 +2602,7 @@ table {
   clear: both;
 }
 #block-superfish-1 {
-  background-image: url(images/topnav_static.jpg);
+  background-image: url(./images/topnav_static.jpg);
   border-radius: 0;
   font-size: 1.3em;
   height: 37px;
@@ -2643,7 +2643,7 @@ table {
 }
 #block-superfish-1 a.active,
 .region-navigation .block__content > .menu > li.active-trail > a {
-  background: url(images/topnav-selected.jpg) 
+  background: url(./images/topnav-selected.jpg) 
  repeat-x scroll center top transparent;
 }
 #block-superfish-1 a.active:hover {
@@ -2774,7 +2774,7 @@ table {
 }
 footer {
   clear: both;
-  background: url(images/footer-background.jpg) repeat-x scroll center top
+  background: url(./images/footer-background.jpg) repeat-x scroll center top
     transparent;
   color: #fff;
 }
@@ -2817,7 +2817,7 @@ footer {
   font-size: 1em;
 }
 #block-block-4 {
-  background: url(images/log-in.gif) no-repeat right top;
+  background: url(./images/log-in.gif) no-repeat right top;
   display: block;
   height: 49px;
   margin-top: 30px;
