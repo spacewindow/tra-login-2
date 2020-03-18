@@ -51,7 +51,7 @@
   tradeSelect.add(defaultOption);
   tradeSelect.selectedIndex = 0;
 
-  fetch("/data/TSSByCountry.json")
+  fetch("data/TSSByCountry.json")
     .then(response => {
       return response.json();
     })

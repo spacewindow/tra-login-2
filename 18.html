@@ -47,7 +47,7 @@
   tradeSelect.add(defaultOption);
   tradeSelect.selectedIndex = 0;
 
-  fetch("/data/TRATrades.json")
+  fetch("data/TRATrades.json")
     .then(response => {
       return response.json();
     })
@@ -71,7 +71,7 @@
     }
 
     // check if selected TRATrade is part of OSAP subset
-    fetch("/data/OSAPTrades.json")
+    fetch("data/OSAPTrades.json")
       .then(response => {
         return response.json();
       })

@@ -44,7 +44,7 @@
   tradeSelect.add(defaultOption);
   tradeSelect.selectedIndex = 0;
 
-  fetch("/data/TRS.json")
+  fetch("data/TRS.json")
     .then(response => {
       return response.json();
     })

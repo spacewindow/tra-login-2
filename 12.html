@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head></head>
 
-<head></head>
+  <body style="display:none">
+    <div id="responsive"></div>
+    <div id="app">
+      <header></header>
+      <nav></nav>
 
-<body style="display:none">
-  <div id="responsive"></div>
-  <div id="app">
-    <header></header>
-    <nav></nav>
+      <!-- ### CONTENT -->
 
-    <!-- ### CONTENT -->
+      <div id="pathfinder">
+        <p class="question">
+          What kind of visa are you applying for in order to work in Australia?
+        </p>
 
-    <div id="pathfinder">
-      <p class="question">
-        What kind of visa are you applying for in order to work in Australia?
-      </p>
+        <div class="button-options">
+          <a class="button-large" href="13.html"
+            ><span>
+              I am applying for a Temporary Skills Shortage visa (482)
+            </span></a
+          >
 
-      <div class="button-options">
-        <a class="button-large" href="13.html"><span>
-            I am applying for a Temporary Skills Visa (482)
-          </span></a>
-
-        <a class="button-large" href="14.html"><span>
-            Iam applyinf for Permanent Residency
-          </span></a>
+          <a class="button-large" href="14.html"
+            ><span>
+              I am applying for Permanent Residency
+            </span></a
+          >
+        </div>
+        <a class="back-button" onclick="history.back()">Back</a>
       </div>
-      <a class="back-button" onclick="history.back()">Back</a>
+
+      <!-- ### END CONTENT -->
+
+      <footer></footer>
     </div>
-
-    <!-- ### END CONTENT -->
-
-    <footer></footer>
-  </div>
-</body>
-<script src="partials.js"></script>
-
+  </body>
+  <script src="partials.js"></script>
 </html>

@@ -55,7 +55,7 @@
   countrySelect.add(defaultOption);
   countrySelect.selectedIndex = 0;
 
-  fetch("/data/OSAP.json")
+  fetch("data/OSAP.json")
     .then(response => {
       return response.json();
     })
